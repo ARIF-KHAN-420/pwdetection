@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<style>
+    input[value] {
+        color: black!important;
+    }
+</style>
+{% extends 'layout.html' %}{% block title %}login {% endblock %} {% block content %}
+<div class="clearfix"></div>
+
+<!-- ........................START.................... -->
+<div class="login-card mb-5">
+    {% if a %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 alert-col relative">
+                <div class="alert alert-info absolue center" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <span>{{a}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endif %} {% load static %}
+    <img class="profile-img-card  img-fluid rounded-circle" src="{% static 'assets/img/avatar_2x.png' %}" alt="image" style="height:100px!important; width:100px!important;">
+    <form class="form-signin" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input class="form-control" type="text" id="inputEmail" required placeholder="Username" name="email">
+        <input class="form-control" type="password" id="inputPassword" required placeholder="Password" name="password">
+
+        <button class="btn btn-dark btn-block btn-lg btn-signin" type="submit">Sign in</button>
+    </form>
+    <div class="mb-0">Forgot your password?<a class="" href="{% url 'reset_password' %}">Reset Now</a></div>
+    <!-- resetPassword -->
+
+
+    <div class="mb-3"><a class="" href="{% url 'signup' %}"> Create a new account</a></div>
+</div>
+<!-- End: Google Style Login -->
+<!-- ........................END.................... -->
+
+<div class="clearfix"></div>
+
+
+{% endblock %}

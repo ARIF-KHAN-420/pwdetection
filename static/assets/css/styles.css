@@ -1,0 +1,46 @@
+* {
+    font-family: 'OpenSans-Regular';
+}
+
+
+/* home page  */
+
+@media only screen and (max-width: 768px) {
+    .url-section {
+        width: 100%!important;
+        margin-top: 20%!important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .url-section {
+        width: 70%!important;
+        margin-top: 15%!important;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .url-section {
+        width: 55%!important;
+        margin-top: 15%!important;
+    }
+}
+
+.footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222222;
+}
+
+.footer span {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footer span ul li {
+    margin-left: 10px;
+    padding: 5px;
+    list-style-type: none;
+}

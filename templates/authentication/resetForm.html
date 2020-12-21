@@ -1,0 +1,32 @@
+<!DOCTYPE html> {% extends 'layout.html' %} {% block title %}Reset {% endblock %}{% block content %}
+
+<!-- ........................START.................... -->
+
+<div class="login-card d-flex flex-column justify-content-center">
+    <h2 class="text-center">Enter new password</h2>
+    {% load static %}
+    <small class="text-danger border-danger profile-name-card">
+        Please enter your new password twice so we can verify you typed it in correctly.<br>
+    </small>
+    <form class="form-signin" action="" method="POST">
+        {% csrf_token %}
+        <fieldset class="module aligned">
+            <div class="form-row field-password1">
+
+                <label for="id_new_password1" class="sr-only">New password:</label>
+                <input class="form-control" type="password" name="new_password1" autocomplete="new-password" required id="id_new_password1" placeholder="New Password">
+            </div>
+            <div class="form-row field-password2">
+
+                <label for="id_new_password2" class="sr-only">Confirm password:</label>
+                <input class="form-control" type="password" name="new_password2" autocomplete="new-password" required id="id_new_password2" placeholder="Confirm Password">
+            </div>
+            <button class="btn btn-black text-light btn-block btn-lg btn-signin" type="submit" style="background-color: rgb(1,1,1);">Change my password</button>
+        </fieldset>
+        <!-- <input type="submit" value="Reset my password"> -->
+    </form>
+</div>
+
+<!-- ........................END.................... -->
+
+{% endblock %}

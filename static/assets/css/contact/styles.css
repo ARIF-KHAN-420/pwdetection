@@ -1,0 +1,43 @@
+body {
+    color: #000000;
+    background: #f5f5f5;
+}
+.contact-main{
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+.contact-form {
+    padding: 0px;
+    margin: 20px 0;
+}
+.contact-form h1 {
+    text-transform: uppercase;
+    margin: 0 0 15px;
+}
+.contact-form .form-control, .contact-form .btn  {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.contact-form .btn-dark {
+    min-width: 150px;
+    background: #000000;
+    border: none;
+}
+.contact-form .btn-dark:hover {
+    background: #000000; 
+}
+.contact-form label {
+    opacity: 0.9;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+.hint-text {
+    font-size: 15px;
+    padding-bottom: 15px;
+    opacity: 0.8;
+}
+.bs-example {
+    margin: 20px;
+}

@@ -1,0 +1,36 @@
+/*
+ * 
+ * Copyright 2013-2020, Admin Arif Khan
+ * version 1.2.0
+ */
+
+.sidebar-brand-text {
+    font-size: 2vw;
+}
+
+input:focus {
+    -webkit-box-shadow: 0px 0px 0px 0px #222222!important;
+    box-shadow: 0px 0px 0px 0px #222222!important;
+    border: 1px solid #222222!important;
+}
+
+@media only screen and (max-width: 768px) {
+    .url-section {
+        width: 100%!important;
+        margin-top: 20%!important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .url-section {
+        width: 80%!important;
+        margin-top: 15%!important;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .url-section {
+        width: 60%!important;
+        margin-top: 15%!important;
+    }
+}

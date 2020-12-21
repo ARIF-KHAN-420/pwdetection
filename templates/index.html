@@ -1,0 +1,34 @@
+<!DOCTYPE html> {% extends 'layout.html' %} {% block title %}home {% endblock %}{% block content %}
+<!-- ........................START.................... -->
+<!-- ........................url input section .................... -->
+<section class="container-fluid url-section mb-0" style="height: 320px;">
+
+    <span class="text-capitalize font-weight-bold d-flex justify-content-center h2">Phishing Website Detection</span>
+    <form action="actionPhishingWD" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="input-group mb-3 mt-5">
+            <div class="input-group-prepend">
+                <span class="input-group-text text-dark font-weight-bold">URL :</span>
+            </div>
+            <input type="text" class="form-control text-dark bg-white" placeholder="Example : https://www.google.com" aria-label="url" aria-describedby="basic-addon2" name="url" required value="{% if b %}{{b}}{% endif %}" id="inputurl">
+            <div class="input-group-append">
+                <!-- <button class="btn btn-dark px-5 " type="submit" >Check</button> -->
+                <button class="btn btn-dark px-5 " type="submit" onclick="checkempty();" id="checkButton">Check</button>
+            </div>
+        </div>
+    </form>
+    {% if a and b %}
+    <div class="font-weight-bold text-dark" style="font-size: x-large;">Your Given Website : <span class="text-danger">{{a}}</span></div>
+    <div class="font-weight-bold text-dark" style="font-size: large;">Website Link : <span class="text-danger">{{b}}</span></div>
+    {% endif %} {% if d %}
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <span class="text-danger font-weight-bold">{{d}}</span>
+    </div>{% endif %} {% if z and b %}
+    <div class="font-weight-bold text-danger" style="font-size: large;">Invalid Url : <span class="text-danger">{{z}}</span></div>
+    <div class="font-weight-bold text-danger" style="font-size: large;">Your Given URL : <span class="text-danger">{{b}}</span></div>
+    {% endif %}
+</section>
+<hr class="border ">{% endblock %}
